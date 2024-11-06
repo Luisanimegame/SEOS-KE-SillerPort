@@ -60,15 +60,7 @@ class OptionsMenu extends MusicBeatState
 			new Optimization("No characters or backgrounds. Just a usual rhythm game layout."),
 			new GraphicLoading("On startup, cache every character. Significantly decrease load times. (HIGH MEMORY)"),
 			new BotPlay("Auto Play"),
-		]),
-		
-		new OptionCategory("Credits", [
-			new GaboWuz("Silly Porter"),
-			new Atsuover("Art, Animation, Music & Creator of Garcello"),
-			new Rageminer("Voice Acting & Co-Creator of Garcello"),
-			new Springi790("The SEOS Kade Port"),
 		])
-		
 	];
 
 	public var acceptInput:Bool = true;
