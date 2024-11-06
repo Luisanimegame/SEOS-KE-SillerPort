@@ -62,13 +62,11 @@ class OptionsMenu extends MusicBeatState
 			new BotPlay("Auto Play"),
 		]),
 		
-		new OptionCategory("Saves and Data", [
-			#if desktop
-			new ReplayOption("View saved song replays."),
-			#end
-			new ResetScoreOption("Reset your score on all songs and weeks. This is irreversible!"),
-			new LockWeeksOption("Reset your story mode progress. This is irreversible!"),
-			new ResetSettings("Reset ALL your settings. This is irreversible!")
+		new OptionCategory("Credits", [
+			new GaboWuz("Silly Porter"),
+			new Atsuover("Art, Animation, Music & Creator of Garcello"),
+			new Rageminer("Voice Acting & Co-Creator of Garcello"),
+			new Springi790("The SEOS Kade Port"),
 		])
 		
 	];
@@ -125,6 +123,10 @@ class OptionsMenu extends MusicBeatState
 		FlxTween.tween(blackBorder,{y: FlxG.height - 18},2, {ease: FlxEase.elasticInOut});
 
 		super.create();
+		
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B_C);
+		#end
 	}
 
 	var isCat:Bool = false;
@@ -157,24 +159,10 @@ class OptionsMenu extends MusicBeatState
 			}
 
 			var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
-
-			if (gamepad != null)
-			{
-				if (gamepad.justPressed.DPAD_UP)
-				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					changeSelection(-1);
-				}
-				if (gamepad.justPressed.DPAD_DOWN)
-				{
-					FlxG.sound.play(Paths.sound('scrollMenu'));
-					changeSelection(1);
-				}
-			}
 			
-			if (FlxG.keys.justPressed.UP)
+			if (controls.UP_P)
 				changeSelection(-1);
-			if (FlxG.keys.justPressed.DOWN)
+			if (controls.DOWN_P)
 				changeSelection(1);
 			
 			if (isCat)

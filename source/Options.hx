@@ -163,6 +163,26 @@ class DownscrollOption extends Option
 	}
 }
 
+class GaboWuz extends Option
+{
+FlxG.openURL('https://youtube.com/@gabewuzx?si=fSD5zcFsASZohdCp');	
+}
+
+class Atsuover extends Option
+{
+FlxG.openURL('https://youtube.com/@atsuover?si=aaQqIAC1oj76lIBx');
+}
+
+class Rageminer extends Option
+{
+FlxG.openURL('https://www.youtube.com/channel/UC-iOE2zjbfescNWEgfxL9hw');
+}
+
+class Springi790 extends Option
+{
+FlxG.openURL('https://gamebanana.com/mods/292384');
+}
+
 class GhostTapOption extends Option
 {
 	public function new(desc:String)
