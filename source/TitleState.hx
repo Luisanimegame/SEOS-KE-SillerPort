@@ -57,7 +57,7 @@ class TitleState extends MusicBeatState
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
 		
-		#if !cpp
+		#if !windows
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
@@ -91,7 +91,7 @@ class TitleState extends MusicBeatState
 		#elseif CHARTING
 		FlxG.switchState(new ChartingState());
 		#else
-		#if !cpp
+		#if !windows
 		new FlxTimer().start(1, function(tmr:FlxTimer)
 		{
 			startIntro();
